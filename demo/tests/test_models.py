@@ -35,10 +35,10 @@ class TestPartners(TransactionCase):
         })
         self.assertEqual(self.partner.hobby.name, 'Minecraft')
 
-    # def test_hobby_in_hobbies(self):
-    #     swimming = self.env.ref('demo.hobby_swimming')
-    #     minecraft = self.env.ref('demo.hobby_minecraft')
-    #     with self.assertRaises(ValidationError):
+    def test_hobby_in_hobbies(self):
+         swimming = self.env.ref('demo.hobby_swimming')
+         minecraft = self.env.ref('demo.hobby_minecraft')
+         with self.assertRaises(ValidationError):
     #         self.partner.write({
     #             'hobbies': swimming.ids,
     #             'hobby': minecraft.id,
